@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="War.vcxproj" Id="88531cdd-b425-48f8-93f9-22649511b9fa" />
+</Solution>
