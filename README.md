@@ -4,36 +4,39 @@ Este projeto é um sistema de gerenciamento de frentes de batalha desenvolvido e
 O objetivo do programa é permitir o cadastro rápido de territórios estratégicos, associando-os a uma cor de exército e à quantidade de tropas disponíveis, gerando um relatório consolidado ao final.
 
 🚀 Funcionalidades
-Cadastro Estruturado: Utiliza struct para agrupar informações de nome, cor e tropas.
+Agrupamento por Struct: Organização lógica de nome, cor do exército e quantidade de tropas.
 
-Armazenamento em Vetor: Gerencia até 5 territórios simultaneamente.
+Vetor de Objetos: Gerenciamento simultâneo de 5 territórios distintos.
 
-Interface via Console: Entrada e saída de dados formatada para facilitar a leitura.
+Tratamento de Localidade: Suporte a caracteres especiais e acentuação no terminal Windows através da locale.h.
 
-Suporte a UTF-8: Configurado para exibir caracteres especiais e acentuação corretamente no terminal Windows.
+Segurança de Memória: Uso de limites de leitura no scanf para evitar buffer overflow.
 
-🛠️ Tecnologias Utilizadas
-Linguagem: C
+🛠️ Tecnologias e Bibliotecas
+<stdio.h>: Entrada e saída padrão.
 
-Bibliotecas Standard: stdio.h, string.h
+<string.h>: Manipulação de cadeias de caracteres.
 
-API Windows: windows.h (para tratamento de codificação de caracteres)
+<locale.h> & <windows.h>: Ajustes de codificação para o padrão brasileiro (UTF-8/CP1252).
 
-💻 Exemplo de Uso
-Ao iniciar o programa, o usuário deve inserir os dados conforme solicitado:
+📋 Como Executar
+Nota: Este projeto foi otimizado para compiladores Windows (como MSVC ou GCC via MinGW), devido ao uso da biblioteca windows.h.
 
-Plaintext
->>> Território 1 <<<
-Nome: Brasil
-Cor do Exército: Verde
-Quantidade de Tropas: 50
-Ao final, o sistema gera uma tabela organizada com o status de cada frente de batalha cadastrada.
+Clone o repositório:
 
-📝 Requisitos Técnicos Aplicados
-Definição e uso de Structs.
+Bash
+git clone https://github.com/seu-usuario/nome-do-repo.git
+Abra o arquivo .c no seu ambiente (Visual Studio, Code::Blocks ou Dev-C++).
 
-Manipulação de Arrays (Vetores) de tipos personalizados.
+Compile e execute.
 
-Uso de Laços de Repetição (for) para entrada e saída de dados.
+Insira os dados conforme solicitado no terminal.
 
-Formatação de strings com printf.
+🧠 Exemplo de Estrutura
+C
+struct Territorio {
+    char nome[30];  // Ex: Alasca
+    char cor[10];   // Ex: Vermelho
+    int tropas;     // Ex: 15
+};
+⭐ Desenvolvido para estudos de lógica e estruturas de dados em C.
