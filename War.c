@@ -1,7 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS // Desabilita avisos de segurança no Visual Studio
 #include <stdio.h>
 #include <string.h>
-// #include <locale.h>
+#include <locale.h>
 #include <windows.h>
 
 // Requisito: Definição da struct para agrupar dados relacionados
@@ -13,9 +13,9 @@ struct Territorio {
 
 int main() {
     // Configura a localidade para aceitar acentuação no console
-    // setlocale(LC_ALL, "Portuguese");
-    SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8);
+    setlocale(LC_ALL, "Portuguese");
+    SetConsoleOutputCP(1252);
+    SetConsoleCP(1252);
 
     // Requisito: Vetor de structs para armazenar 5 territórios
     struct Territorio listaTerritorios[5];
@@ -49,7 +49,7 @@ int main() {
     printf("========================================\n");
 
     for (int i = 0; i < 5; i++) {
-        printf("Território: %-15s | Cor: %-10s | Tropas: %d\n",
+        printf("Território: %-20s | Cor: %-13s | Tropas: %d\n",
             listaTerritorios[i].nome,
             listaTerritorios[i].cor,
             listaTerritorios[i].tropas);
