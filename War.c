@@ -53,10 +53,10 @@ int main() {
 		//	listaTerritorios[i].nome,
         //    listaTerritorios[i].cor,
         //    listaTerritorios[i].tropas);
-		printf("Território %d\n", i + 1);
-        printf("Nome: %s\n", listaTerritorios[i].nome);
-        printf("Dominado por: Exército %s\n", listaTerritorios[i].cor);
-        printf("Tropas: %d\n", listaTerritorios[i].tropas);
+		printf("TERRITÓRIO: %d\n", i + 1);
+        printf("    -Nome: %s\n", listaTerritorios[i].nome);
+        printf("    -Dominado por: Exército %s\n", listaTerritorios[i].cor);
+        printf("    -Tropas: %d\n", listaTerritorios[i].tropas);
 		printf("----------------------------------------\n");
 
     }
