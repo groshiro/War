@@ -27,16 +27,16 @@ int main() {
     // --- ENTRADA DE DADOS ---
     // Laço for para preencher o vetor conforme solicitado
     for (int i = 0; i < 5; i++) {
-        printf(">>> Território %d <<<\n", i + 1);
+        printf(">>> Cadastrando Território %d <<<\n", i + 1);
 
-        printf("Nome: ");
+        printf("Nome do Território: ");
         // Usando scanf para o nome (lê até o primeiro espaço)
         scanf("%29s", listaTerritorios[i].nome);
 
         printf("Cor do Exército: ");
         scanf("%9s", listaTerritorios[i].cor);
 
-        printf("Quantidade de Tropas: ");
+        printf("Número de Tropas: ");
         scanf("%d", &listaTerritorios[i].tropas);
 
         printf("\n");
@@ -44,17 +44,23 @@ int main() {
 
     // --- EXIBIÇÃO DOS DADOS ---
     // O sistema apresenta os dados imediatamente após o cadastro (Alto Desempenho)
-    printf("========================================\n");
-    printf("       RELATÓRIO DE TERRITÓRIOS\n");
-    printf("========================================\n");
+    printf("==========================================================================\n");
+    printf("                      MAPA DO MUNDO - ESTADO ATUAL\n");
+    printf("==========================================================================\n");
 
     for (int i = 0; i < 5; i++) {
-        printf("Território: %-20s | Cor: %-13s | Tropas: %d\n",
-            listaTerritorios[i].nome,
-            listaTerritorios[i].cor,
-            listaTerritorios[i].tropas);
+        //printf("Território: %-20s| Cor: % -13s | Tropas : % d\n",
+		//	listaTerritorios[i].nome,
+        //    listaTerritorios[i].cor,
+        //    listaTerritorios[i].tropas);
+		printf("Território %d\n", i + 1);
+        printf("Nome: %s\n", listaTerritorios[i].nome);
+        printf("Dominado por: Exército %s\n", listaTerritorios[i].cor);
+        printf("Tropas: %d\n", listaTerritorios[i].tropas);
+		printf("----------------------------------------\n");
+
     }
-    printf("========================================\n");
+    printf("==========================================================================\n");
 
     return 0;
 }
