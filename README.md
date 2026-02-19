@@ -39,4 +39,5 @@ struct Territorio {
     char cor[10];   // Ex: Vermelho
     int tropas;     // Ex: 15
 };
+
 ⭐ Desenvolvido para estudos de lógica e estruturas de dados em C.
